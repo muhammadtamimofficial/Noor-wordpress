@@ -1,0 +1,442 @@
+/*!
+Theme Name: BPTBusinessLine
+Theme URI: http://www.buyprotheme.com/product/bptbusinessline
+Author: bdrabin
+Author URI: http://www.buyprotheme.com
+Description: BusinessLine is a super responsive WordPress Theme designed in Bootstrap FreamWork.Each element has been thoughtfully designed to match the needs of the Business and Corporate Industry across the world.Its responsive design ensures it looks perfect on all screen sizes and resolutions.
+Version: 1.0.9
+Tested up to: 7.3
+Requires PHP: 5.6
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: bptbusinessline
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+BusinessLine is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+	vertical-align: baseline;
+}
+[hidden] {
+	display: none;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	line-height:1.2em;
+	background: #eee;
+	background-size:2.4em 2.4em;
+	background-origin:content-box;
+	padding:0 20px;
+	text-align:justify;
+	font-family:calibri,arial,sans-serif;
+}
+
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+	float: left;
+    height: 50px;
+    padding: 15px 9px;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+/*--------------------------------------------------------------
+## calendar widget
+--------------------------------------------------------------*/
+.widget_calendar {float: left;width: 100%;}
+#wp-calendar {width: 100%; }
+#wp-calendar caption { text-align: right; color: #333; font-size: 12px; margin-top: 10px; margin-bottom: 15px; }
+#wp-calendar thead { font-size: 10px; }
+#wp-calendar thead th { padding-bottom: 10px; }
+#wp-calendar tbody { color: #aaa; }
+#wp-calendar tbody td { background: #f5f5f5; border: 1px solid #fff; text-align: center; padding:8px;}
+#wp-calendar tbody td:hover { background: #fff; }
+#wp-calendar tbody .pad { background: none; }
+#wp-calendar tfoot #next { font-size: 10px; text-transform: uppercase; text-align: right; }
+#wp-calendar tfoot #prev { font-size: 10px; text-transform: uppercase; padding-top: 10px; }
+/*--------------------------------------------------------------
+## post-navigation
+--------------------------------------------------------------*/
+.post-navigation{
+	border-top: 1px solid #09A223;	
+	border-bottom: 1px solid #09A223;
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0;
+	color: #ccc;
+}
+.post-navigation h2{display: none;}
+.post-navigation a{color: #000;}
+.post-navigation .nav-previous{float: left;width: 45%;padding-left: 5px;}
+.post-navigation .nav-next{float: right;width: 45%;text-align: right;padding-right: 5px;border-left: 1px solid #09A223; }
+.post-navigation .post-title{display: block;}
+.posts-navigation{border-top: 1px solid #09a223;padding-top: 10px;}
+.posts-navigation .screen-reader-text{font-size: 24px;}
+
+/*--------------------------------------------------------------
+## navbar
+--------------------------------------------------------------*/
+#header .navbar-collapse .current-page-ancestor{
+    background-color: #e7e7e7;
+    color: #333;
+}
+#header .navbar.navbar-default .navbar-nav li.drop ul.drop-down .current-menu-item > a{
+    color: #e84c3d;
+}
+
+/*--------------------------------------------------------------
+	## page
+--------------------------------------------------------------*/
+.page-img img{
+	width: 100%;
+}
+/*--------------------------------------------
+	widget
+--------------------------------------------*/
+.widget .widget-title {
+    margin: 0 0 20px 0;
+    font-size: 26px;
+}
+.widget ul {
+    margin-bottom: 10px;
+}
+.widget ul li {
+    margin-bottom: 5px;
+    padding-left: 18px;
+    position: relative;
+    padding-top: 3px;
+}
+.widget ul li:last-of-type {
+    margin-bottom: 0;
+}
+.widget ul li:before {
+    content: "\f054";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    font-size: 13px;
+    font-family: 'FontAwesome';
+}
+.widget ul li,
+.widget ul li a {
+    color: #333;
+}
+.widget ul li a {
+	line-height: 23px;
+}
+.widget ul li:before,
+.widget ul li a:hover,
+.widget ul li a:focus {
+    color: #e84c3d;
+    text-decoration: none;
+}
+/*--------------------------------------------
+	widget tag
+--------------------------------------------*/
+.widget_tag_cloud a:before {
+    content: "\f02c";
+    padding-right: 8px;
+    font-size: 13px;
+    font-family: 'FontAwesome';
+}
+.widget_tag_cloud a {
+    margin: 0 2px 2px 0;
+    font-size: 14px !important;
+    font-style: normal !important;
+    line-height: 17px;
+    float: left;
+    padding: 8px 15px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: #ffffff !important;
+    border: 0;
+    background: #e84c3d;
+    text-shadow: none;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.widget_tag_cloud a:hover {
+    background: #24252a;
+}
+/*--------------------------------------------
+	SEARCH
+--------------------------------------------*/
+.widget_search{position: relative;}
+.widget_search .screen-reader-text{display: none;}
+.widget_search .search-field{
+	border: 1px solid #e84c3d;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+}
+.widget_search .search-submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e84c3d;
+    border: none;
+    height: 40px;
+    color: #FFF;
+}
+.breadcrumb-bg{background: #363636;}
+/*--------------------------------------------
+	404
+--------------------------------------------*/
+.error-page .widget_search{width: 322px;margin: 15px auto 0 auto;text-align: left;}
+.error-page .widget_search .search-field{width: 100%;}
